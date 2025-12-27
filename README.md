@@ -2,7 +2,7 @@
 
 A revolutionary approach to password security that measures complexity through **depth** rather than traditional metrics like length and character variety.
 
-## 🔑 Overview
+##  Overview
 
 The Password Depth System introduces a new paradigm for password complexity assessment. Instead of simply counting characters or checking for symbols, this system measures password strength by the number of independent **layers of transformation and randomization** applied to create the password.
 
@@ -18,14 +18,14 @@ The Password Depth System introduces a new paradigm for password complexity asse
 - Independent randomization at each layer
 - Cumulative complexity through depth
 
-## 🚀 Features
+##  Features
 
 - **Password Generation**: Create passwords with specified depth levels
 - **Password Analysis**: Analyze existing passwords to determine their depth
 - **Depth Verification**: Check if passwords meet minimum depth requirements
 - **Multi-Language Support**: Implemented in both JavaScript (Node.js) and C# (.NET 8)
 
-## 📊 Depth Layers Explained
+## Depth Layers Explained
 
 ### Layer 1: Base Random Layer
 The foundation of every password - pure random character generation.
@@ -47,7 +47,7 @@ Incorporates position-dependent transformations.
 Applies cryptographic-level transformations and maximum randomization.
 - Example: `xK9pQ@3#Rt2$mP5&Hx7`
 
-## 🛠️ Installation
+##  Installation
 
 ### JavaScript/Node.js Version
 
@@ -77,7 +77,7 @@ dotnet run
 
 Or open `PasswordDepth.ConsoleApp.csproj` in Visual Studio and run the project.
 
-## 💻 Usage
+##  Usage
 
 ### JavaScript Example
 
@@ -119,7 +119,7 @@ bool meetsRequirement = system.VerifyDepthRequirement("H3ll@W0rld!", 3);
 Console.WriteLine($"Meets depth 3 requirement: {meetsRequirement}");
 ```
 
-## 📖 Documentation
+## Documentation
 
 See [password-depth.txt](password-depth.txt) for comprehensive documentation including:
 - Detailed explanation of each depth layer
@@ -127,14 +127,14 @@ See [password-depth.txt](password-depth.txt) for comprehensive documentation inc
 - Implementation guidelines
 - Use cases and benefits
 
-## 🔐 Security Benefits
+##  Security Benefits
 
 - **Quantifiable Complexity**: Depth provides a clear, measurable metric for password strength
 - **Standardization**: Organizations can enforce minimum depth requirements
 - **Future-Proof**: Depth-based approach adapts to evolving security needs
 - **User-Friendly**: Easier to communicate "Use a depth-3 password" than complex rules
 
-## 🧪 Testing
+##  Testing
 
 The project includes test passwords ranging from depth 1 to 5:
 
@@ -144,7 +144,7 @@ The project includes test passwords ranging from depth 1 to 5:
 - `P@ssw0rd!2023#Secure` - Depth 4 (Strong)
 - `aB3$x9Kp2Ff8e4A1` - Depth 5 (Maximum)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Feel free to:
 - Report bugs
@@ -152,16 +152,16 @@ Contributions are welcome! Feel free to:
 - Submit pull requests
 - Improve documentation
 
-## 📄 License
+##  License
 
 This project is open source and available for use and modification.
 
-## 👤 Author
+## Author
 
 **Millennium2050**
 - Repository: [depth0fPassw0rd](https://github.com/Millennium2050/depth0fPassw0rd)
 
-## 🌟 Why This Matters
+##  Why This Matters
 
 Traditional password requirements often lead to predictable patterns (e.g., "Password1!"). The Depth System encourages true randomization and layered complexity, resulting in passwords that are both strong and measurable by a clear, standardized metric.
 
