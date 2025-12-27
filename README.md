@@ -119,13 +119,6 @@ bool meetsRequirement = system.VerifyDepthRequirement("H3ll@W0rld!", 3);
 Console.WriteLine($"Meets depth 3 requirement: {meetsRequirement}");
 ```
 
-## Documentation
-
-See [password-depth.txt](password-depth.txt) for comprehensive documentation including:
-- Detailed explanation of each depth layer
-- Security considerations
-- Implementation guidelines
-- Use cases and benefits
 
 ##  Security Benefits
 
