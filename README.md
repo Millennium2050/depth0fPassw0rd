@@ -23,7 +23,6 @@ The Password Depth System introduces a new paradigm for password complexity asse
 - **Password Generation**: Create passwords with specified depth levels
 - **Password Analysis**: Analyze existing passwords to determine their depth
 - **Depth Verification**: Check if passwords meet minimum depth requirements
-- **Multi-Language Support**: Implemented in both JavaScript (Node.js) and C# (.NET 8)
 
 ## Depth Layers Explained
 
