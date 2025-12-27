@@ -1,8 +1,54 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
+using PasswordDepth;
 using System.Security.Cryptography;
 using System.Text;
+
+
+var depthSystem = new PasswordDepthSystem();
+
+    Console.WriteLine("=== Password Depth System ===\n");
+
+    // Generate passwords with different depths
+    Console.WriteLine("Generating passwords with varying depths:\n");
+    for (int depth = 1; depth <= 5; depth++)
+    {
+        string password = depthSystem.GeneratePasswordWithDepth(depth, 5);
+        Console.WriteLine($"Depth {depth}: {password}");
+    }
+
+    Console.WriteLine("\n" + new string('=', 50) + "\n");
+
+    // Analyze existing passwords
+    Console.WriteLine("Analyzing password depths:\n");
+
+    string[] testPasswords = {
+                    "hello",
+                    "Hello123",
+                    "H3ll@W0rld!",
+                    "P@ssw0rd!2023#Secure",
+                    "aB3$x9Kp2Ff8e4A1"
+                };
+
+    foreach (var pwd in testPasswords)
+    {
+        var analysis = depthSystem.AnalyzePasswordDepth(pwd);
+        Console.WriteLine($"Password: '{pwd}'");
+        Console.WriteLine(analysis);
+        Console.WriteLine();
+    }
+
+    // Verify depth requirements
+    Console.WriteLine(new string('=', 50) + "\n");
+    Console.WriteLine("Verifying depth requirements (minimum depth: 3):\n");
+
+    foreach (var pwd in testPasswords)
+    {
+        bool meetsRequirement = depthSystem.VerifyDepthRequirement(pwd, 3);
+        Console.WriteLine($"'{pwd}' - {(meetsRequirement ? "✓ PASS" : "✗ FAIL")}");
+    }
+
+    Console.ReadKey();
+
 
 namespace PasswordDepth
 {
@@ -251,53 +297,5 @@ namespace PasswordDepth
         }
     }
 
-    // Example usage
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var depthSystem = new PasswordDepthSystem();
-
-            Console.WriteLine("=== Password Depth System ===\n");
-
-            // Generate passwords with different depths
-            Console.WriteLine("Generating passwords with varying depths:\n");
-            for (int depth = 1; depth <= 5; depth++)
-            {
-                string password = depthSystem.GeneratePasswordWithDepth(depth, 5);
-                Console.WriteLine($"Depth {depth}: {password}");
-            }
-
-            Console.WriteLine("\n" + new string('=', 50) + "\n");
-
-            // Analyze existing passwords
-            Console.WriteLine("Analyzing password depths:\n");
-
-            string[] testPasswords = {
-                "hello",
-                "Hello123",
-                "H3ll@W0rld!",
-                "P@ssw0rd!2023#Secure",
-                "aB3$x9Kp2Ff8e4A1"
-            };
-
-            foreach (var pwd in testPasswords)
-            {
-                var analysis = depthSystem.AnalyzePasswordDepth(pwd);
-                Console.WriteLine($"Password: '{pwd}'");
-                Console.WriteLine(analysis);
-                Console.WriteLine();
-            }
-
-            // Verify depth requirements
-            Console.WriteLine(new string('=', 50) + "\n");
-            Console.WriteLine("Verifying depth requirements (minimum depth: 3):\n");
-
-            foreach (var pwd in testPasswords)
-            {
-                bool meetsRequirement = depthSystem.VerifyDepthRequirement(pwd, 3);
-                Console.WriteLine($"'{pwd}' - {(meetsRequirement ? "✓ PASS" : "✗ FAIL")}");
-            }
-        }
-    }
+   
 }
