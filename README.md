@@ -1,4 +1,4 @@
-# Password Depth System. Is das eine neue paradigma? 
+# Password Depth System. Is this a new paradigm?
 
 A revolutionary approach to password security that measures complexity through **depth** rather than traditional metrics like length and character variety.
 
